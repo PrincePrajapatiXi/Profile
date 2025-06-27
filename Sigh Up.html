@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="Sigh Up.css" />
+</head>
+<body>
+  <div class="signup-container">
+    <form class="signup-box" onsubmit="return handleSignUp(event)">
+      <h2>SIGN UP</h2>
+
+      <label for="username">Username</label>
+      <input type="text" id="username" placeholder="yourname123" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="you@example.com" required />
+
+      <label for="password">Password</label>
+      <div class="password-wrapper">
+        <input type="password" id="password" placeholder="********" required />
+        <span class="toggle-password" onclick="togglePassword()">👁️</span>
+      </div>
+
+      <label for="confirm">Confirm Password</label>
+      <input type="password" id="confirm" placeholder="********" required />
+
+      <button type="submit">Sign Up</button>
+
+      <p class="extra-links">
+        Already have an account? <a href="Sign In.html">Login here</a>
+      </p>
+    </form>
+  </div>
+  <script src="Sign Up.js"></script>
+</body>
+</html>

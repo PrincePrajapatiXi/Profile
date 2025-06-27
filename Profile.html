@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Profile</title>
+  <link rel="stylesheet" href="Profile.css" />
+  <link rel="shortcut icon" href="Images/Favicon.jpg" type="image/x-icon">
+</head>
+<body>
+  <div class="profile-container">
+    <div class="profile-header">
+      <img src="Images/profile.png" alt="Profile Picture" class="profile-pic" />
+      <div class="profile-info">
+        <h2 id="displayUsername">@your_username</h2>
+
+        <p><strong>0</strong> posts | <strong>0</strong> followers | <strong>0</strong> following</p>
+        <!-- Trigger Button (already exists probably) -->
+<button onclick="toggleEditForm()">Edit Profile</button>
+
+<!-- Edit Profile Form -->
+<div class="edit-profile-form" id="editForm">
+  <h3>Edit Your Profile</h3>
+  <label for="name">Full Name</label>
+  <input type="text" id="name" placeholder="Your Name" />
+
+  <label for="bio">Bio</label>
+  <textarea id="bio" placeholder="Tell something about you..."></textarea>
+
+  <label for="website">Website</label>
+  <input type="url" id="website" placeholder="https://example.com" />
+
+  <button onclick="saveProfile()">Save</button>
+  <button onclick="toggleEditForm()">Cancel</button>
+</div>
+
+      </div>
+    </div>
+    <div class="bio">
+      <p>Hello! I'm Prince, a web developer 🌐</p>
+      <p><a href="#">www.Petifaye.com</a></p>
+    </div>
+    <div class="upload-section">
+  <input type="file" id="imageUpload" accept="image/*" hidden />
+  <button onclick="document.getElementById('imageUpload').click()">Upload New Image</button>
+</div>
+
+    <div class="gallery">
+      
+    </div>
+  </div>
+  <!-- Image Modal -->
+<div id="imageModal" class="modal">
+  <span class="close" onclick="closeModal()">×</span>
+  <img class="modal-content" id="modalImage">
+</div>
+
+  <script src="Profile.js"></script>
+</body>
+</html>
