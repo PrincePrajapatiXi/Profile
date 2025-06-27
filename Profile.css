@@ -1,189 +1,191 @@
 body {
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  background-color: #fafafa;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background-color: #fafafa;
 }
 
 .profile-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
 }
 
 .profile-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 .profile-pic {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-right: 30px;
-  border: 2px solid #ddd;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 30px;
+    border: 2px solid #ddd;
 }
 
 .profile-info h2 {
-  margin: 0;
-  font-size: 24px;
+    margin: 0;
+    font-size: 24px;
 }
 
 .profile-info p {
-  margin: 5px 0;
-  color: #555;
+    margin: 5px 0;
+    color: #555;
 }
 
 .profile-info button {
-  padding: 8px 15px;
-  border: none;
-  border-radius: 5px;
-  background-color: #0095f6;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0095f6;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .profile-info button:hover {
-  background-color: #007ad9;
+    background-color: #007ad9;
 }
 
 .bio {
-  margin-bottom: 20px;
-  color: #333;
+    margin-bottom: 20px;
+    color: #333;
 }
 
 .bio a {
-  color: #0095f6;
-  text-decoration: none;
+    color: #0095f6;
+    text-decoration: none;
 }
 
 .bio a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
 }
 
 .gallery img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 8px;
-  border: 1px solid #ddd;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ddd;
 }
 
 /* Modal Styles */
 .modal {
-  display: none;
-  position: fixed;
-  z-index: 10;
-  padding-top: 60px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.8);
+    display: none;
+    position: fixed;
+    z-index: 10;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .modal-content {
-  margin: auto;
-  display: block;
-  width: 90%;
-  max-width: 600px;
-  border-radius: 10px;
+    margin: auto;
+    display: block;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
 }
 
 .close {
-  position: absolute;
-  top: 30px;
-  right: 40px;
-  color: white;
-  font-size: 35px;
-  font-weight: bold;
-  cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .gallery img:hover {
-  cursor: pointer;
-  opacity: 0.9;
+    cursor: pointer;
+    opacity: 0.9;
 }
 
 .profile-pic {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-right: 30px;
-  border: 2px solid #ddd;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* soft glow */
-  background-color: white; /* makes crown edge cleaner */
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 30px;
+    border: 2px solid #ddd;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    /* soft glow */
+    background-color: white;
+    /* makes crown edge cleaner */
 }
 
 @media (max-width: 600px) {
-  .profile-header {
-    flex-direction: column;
-    align-items: center;
-  }
+    .profile-header {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .edit-profile-form {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
-  margin: 20px auto;
-  display: none;
-  flex-direction: column;
-  gap: 10px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .edit-profile-form input,
 .edit-profile-form textarea {
-  width: 100%;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
 }
 
 .edit-profile-form button {
-  padding: 10px 15px;
-  margin-top: 10px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
 }
 
 .edit-profile-form button:first-of-type {
-  background-color: #0095f6;
-  color: white;
+    background-color: #0095f6;
+    color: white;
 }
 
 .edit-profile-form button:last-of-type {
-  background-color: #f5f5f5;
+    background-color: #f5f5f5;
 }
 
 .upload-section {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .upload-section button {
-  padding: 10px 15px;
-  background-color: #0095f6;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.3s ease;
+    padding: 10px 15px;
+    background-color: #0095f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
 }
 
 .upload-section button:hover {
-  background-color: #0077cc;
+    background-color: #0077cc;
 }
