@@ -1,0 +1,326 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   CUSTOM SCROLLBAR
+   ═══════════════════════════════════════════════════════════════════════════ */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #818cf8, #22d3ee);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #6366f1, #06b6d4);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   BASE STYLES
+   ═══════════════════════════════════════════════════════════════════════════ */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+/* Selection */
+::selection {
+    background: rgba(129, 140, 248, 0.3);
+}
+
+/* Focus accessibility */
+*:focus-visible {
+    outline: 2px solid #818cf8;
+    outline-offset: 2px;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   GRADIENT TEXT
+   ═══════════════════════════════════════════════════════════════════════════ */
+.gradient-text {
+    background: linear-gradient(135deg, #818cf8 0%, #22d3ee 50%, #818cf8 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+
+    0%,
+    100% {
+        background-position: 0% center;
+    }
+
+    50% {
+        background-position: 100% center;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   GLASSMORPHISM
+   ═══════════════════════════════════════════════════════════════════════════ */
+.glass {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.light .glass {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   ANIMATED BLOBS
+   ═══════════════════════════════════════════════════════════════════════════ */
+.gradient-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.5;
+    animation: blob 8s infinite ease-in-out;
+    will-change: transform;
+}
+
+.gradient-blob-1 {
+    background: linear-gradient(135deg, #818cf8, #6366f1);
+    width: min(400px, 80vw);
+    height: min(400px, 80vw);
+    top: 10%;
+    left: 10%;
+}
+
+.gradient-blob-2 {
+    background: linear-gradient(135deg, #22d3ee, #06b6d4);
+    width: min(300px, 60vw);
+    height: min(300px, 60vw);
+    top: 40%;
+    right: 10%;
+    animation-delay: 2s;
+}
+
+@keyframes blob {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    25% {
+        transform: translate(20px, -30px) scale(1.05);
+    }
+
+    50% {
+        transform: translate(-20px, 20px) scale(0.95);
+    }
+
+    75% {
+        transform: translate(30px, 10px) scale(1.02);
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   SECTION STYLES - RESPONSIVE
+   ═══════════════════════════════════════════════════════════════════════════ */
+.section {
+    padding: 4rem 1rem;
+}
+
+@media (min-width: 640px) {
+    .section {
+        padding: 5rem 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .section {
+        padding: 6rem 4rem;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   CARD ANIMATIONS
+   ═══════════════════════════════════════════════════════════════════════════ */
+.card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(129, 140, 248, 0.15);
+}
+
+/* Gradient border animation */
+.gradient-border {
+    position: relative;
+    background: transparent;
+}
+
+.gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, #818cf8, #22d3ee, #818cf8);
+    background-size: 200% 200%;
+    animation: gradient-border 3s linear infinite;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+@keyframes gradient-border {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   RESPONSIVE UTILITIES
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Hide on mobile */
+.hide-mobile {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .hide-mobile {
+        display: block;
+    }
+}
+
+/* Show only on mobile */
+.show-mobile {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .show-mobile {
+        display: none;
+    }
+}
+
+/* Container responsive */
+.container-responsive {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+    .container-responsive {
+        max-width: 640px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .container-responsive {
+        max-width: 768px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container-responsive {
+        max-width: 1024px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container-responsive {
+        max-width: 1280px;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   BUTTON ANIMATIONS
+   ═══════════════════════════════════════════════════════════════════════════ */
+.btn-primary {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   TEXT BALANCE FOR HEADINGS
+   ═══════════════════════════════════════════════════════════════════════════ */
+h1,
+h2,
+h3 {
+    text-wrap: balance;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   MOBILE TOUCH IMPROVEMENTS
+   ═══════════════════════════════════════════════════════════════════════════ */
+@media (hover: none) {
+    .card-hover:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .card-hover:active {
+        transform: scale(0.98);
+    }
+}
+
+/* Disable animations for reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
