@@ -3,36 +3,60 @@
 
 <head>
   <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sign In</title>
-  <link rel="stylesheet" href="Sigh In.css" />
-  <link rel="shortcut icon" href="Images/Favicon.jpg" type="image/x-icon">
+  <meta name="description"
+    content="Prince Prajapati - Full Stack Developer building digital experiences that matter. React, Node.js, MongoDB specialist based in India." />
+  <meta name="keywords"
+    content="Full Stack Developer, React Developer, Node.js, MongoDB, Web Developer, India, MERN Stack, Portfolio" />
+  <meta name="author" content="Prince Prajapati" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://princeprajapati.dev/" />
+  <meta property="og:title" content="Prince Prajapati | Full Stack Developer" />
+  <meta property="og:description"
+    content="Building digital experiences that matter. React, Node.js, MongoDB specialist." />
+  <meta property="og:image" content="/og-image.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://princeprajapati.dev/" />
+  <meta name="twitter:title" content="Prince Prajapati | Full Stack Developer" />
+  <meta name="twitter:description"
+    content="Building digital experiences that matter. React, Node.js, MongoDB specialist." />
+  <meta name="twitter:image" content="/og-image.png" />
+
+  <!-- Google Fonts - Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Prince Prajapati",
+      "url": "https://princeprajapati.dev/",
+      "jobTitle": "Full Stack Developer",
+      "knowsAbout": ["React", "Node.js", "MongoDB", "JavaScript", "Web Development"],
+      "sameAs": [
+        "https://github.com/PrincePrajapatiXi",
+        "https://linkedin.com/in/princeprajapati"
+      ]
+    }
+    </script>
+
+  <title>Prince Prajapati | Full Stack Developer</title>
+  <script type="module" crossorigin src="/assets/index-BkTkkWIa.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-D-m5BZVr.css">
 </head>
 
 <body>
-  <div class="login-container">
-    <form class="login-box" onsubmit="return handleLogin(event)">
-      <h2>LOGIN</h2>
-
-      <label for="username">Username</label>
-      <input type="text" id="username" placeholder="nick123" required />
-
-      <label for="password">Password</label>
-      <div class="password-wrapper">
-        <input type="password" id="password" placeholder="********" required />
-        <span class="toggle-password" onclick="togglePassword()">👁️</span>
-      </div>
-
-      <button type="submit">Sign In</button>
-
-      <p class="extra-links">
-        Forgot Password? <a href="#">click here</a> |
-        <a href="Sigh Up.html">Sign Up</a>
-      </p>
-    </form>
-  </div>
-
-  <script src="Sign In.js"></script>
+  <div id="root"></div>
 </body>
 
 </html>
