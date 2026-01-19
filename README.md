@@ -1,77 +1,16 @@
-# Prince Prajapati - Portfolio
+# React + Vite
 
-A modern, responsive portfolio website built with React and Vite.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 🚀 Features
+Currently, two official plugins are available:
 
-- **Modern UI** - Clean, professional design with dark/light theme
-- **Responsive** - Fully responsive across all devices
-- **Interactive Timeline** - Showcase your journey/milestones
-- **Testimonials** - Display client/peer reviews
-- **Certifications** - Show your certificates & achievements
-- **Projects Showcase** - Bento grid layout for projects
-- **Skills Section** - Animated skills display
-- **Contact Form** - Working contact form with Web3Forms
-- **SEO Optimized** - Meta tags, Open Graph, JSON-LD
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## 🛠️ Tech Stack
+## React Compiler
 
-- **Frontend:** React 18, Vite
-- **Styling:** Tailwind CSS
-- **Animations:** Framer Motion
-- **Icons:** React Icons
-- **Contact:** Web3Forms
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## 📁 Project Structure
+## Expanding the ESLint configuration
 
-```
-src/
-├── components/
-│   ├── Hero.jsx          # Hero section
-│   ├── Projects.jsx      # Projects showcase
-│   ├── Skills.jsx        # Skills grid
-│   ├── Timeline.jsx      # Journey timeline
-│   ├── Testimonials.jsx  # Reviews section
-│   ├── About.jsx         # About me
-│   ├── Certifications.jsx # Certificates
-│   ├── Contact.jsx       # Contact form
-│   ├── Navbar.jsx        # Navigation
-│   └── Footer.jsx        # Footer
-├── data/
-│   └── index.js          # All portfolio data (edit this!)
-├── context/
-│   └── ThemeContext.jsx  # Dark/Light theme
-└── App.jsx               # Main app
-```
-
-## ✏️ How to Customize
-
-All content is in `src/data/index.js`:
-
-1. **Personal Info** - Name, email, social links
-2. **Projects** - Your projects with links
-3. **Skills** - Technologies you know
-4. **Timeline** - Your journey/milestones
-5. **Testimonials** - Reviews from clients
-6. **Certifications** - Your certificates
-
-## 🚀 Getting Started
-
-```bash
-# Install dependencies
-npm install
-
-# Run development server
-npm run dev
-
-# Build for production
-npm run build
-```
-
-## 📝 License
-
-MIT License
-
----
-
-Made with ❤️ by Prince Prajapati
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

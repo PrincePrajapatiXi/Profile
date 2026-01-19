@@ -55,32 +55,26 @@ function TimelineItem({ item, index, isExpanded, onToggle }) {
 
     return (
         <motion.div
-            initial={{ opacity: 0, x: isLeft ? -60 : 60 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-50px' }}
-            transition={{ duration: 0.6, delay: index * 0.1, ease: 'easeOut' }}
-            className={`relative flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-0 mb-12 last:mb-0`}
+            transition={{ duration: 0.5, delay: index * 0.1, ease: 'easeOut' }}
+            className="relative flex items-start gap-4 mb-8 last:mb-0"
         >
-            {/* Timeline Dot with Glow */}
-            <div className="absolute left-1/2 md:left-1/2 transform -translate-x-1/2 z-10">
+            {/* Timeline Dot - Left side on mobile, center on desktop */}
+            <div className="flex-shrink-0 md:absolute md:left-1/2 md:transform md:-translate-x-1/2 z-10">
                 <motion.div
-                    whileHover={{ scale: 1.2 }}
-                    className={`relative w-12 h-12 rounded-full bg-gradient-to-br ${isDark ? colors.dark : colors.light} 
+                    whileHover={{ scale: 1.1 }}
+                    className={`relative w-10 h-10 md:w-12 md:h-12 rounded-full bg-gradient-to-br ${isDark ? colors.dark : colors.light} 
                         flex items-center justify-center shadow-lg ${colors.glow} cursor-pointer`}
                     onClick={onToggle}
                 >
-                    {/* Pulse Animation */}
-                    <motion.div
-                        className={`absolute inset-0 rounded-full bg-gradient-to-br ${isDark ? colors.dark : colors.light}`}
-                        animate={{ scale: [1, 1.3, 1], opacity: [0.5, 0, 0.5] }}
-                        transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-                    />
-                    <IconComponent className="text-white text-lg z-10" />
+                    <IconComponent className="text-white text-sm md:text-lg z-10" />
                 </motion.div>
             </div>
 
-            {/* Content Card - Left Side */}
-            <div className={`w-full md:w-1/2 ${isLeft ? 'md:pr-16 md:text-right' : 'md:pl-16 md:order-2'}`}>
+            {/* Content Card - Full width on mobile, alternate sides on desktop */}
+            <div className={`flex-1 md:w-[calc(50%-2rem)] ${isLeft ? 'md:mr-auto md:pr-8 md:text-right' : 'md:ml-auto md:pl-8'}`}>
                 <motion.div
                     whileHover={{ y: -4 }}
                     onClick={onToggle}
@@ -196,9 +190,9 @@ export default function Timeline() {
                 </motion.div>
 
                 {/* Timeline Container */}
-                <div ref={containerRef} className="relative">
-                    {/* Animated Timeline Line */}
-                    <div className="absolute left-1/2 top-0 bottom-0 w-1 transform -translate-x-1/2">
+                <div ref={containerRef} className="relative pl-6 md:pl-0">
+                    {/* Animated Timeline Line - Left on mobile, center on desktop */}
+                    <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 md:w-1 md:transform md:-translate-x-1/2">
                         {/* Background Line */}
                         <div className={`absolute inset-0 ${isDark ? 'bg-dark-border' : 'bg-light-border'}`} />
 

@@ -206,7 +206,7 @@ export const timeline = [
         type: 'education',                          // Color: Purple
         title: 'Class 12th (Science)',              // Main heading
         subtitle: 'SVM Inter College',              // Subheading (school name)
-        date: '2024 - Present',                     // When (shows on card)
+        date: '2026 - Present',                     // When (shows on card)
         description: 'Currently studying in Class 12th with Science stream, preparing for higher education.',
         icon: 'education',                          // Book icon
         expandedContent: 'Focusing on Physics, Chemistry, and Mathematics while continuing to develop programming skills.',
@@ -220,7 +220,7 @@ export const timeline = [
         type: 'milestone',                          // Color: Orange
         title: 'Started Learning Web Development',
         subtitle: 'Self-taught Journey',
-        date: '2023',
+        date: '2025',
         description: 'Began my journey into web development, learning HTML, CSS, and JavaScript.',
         icon: 'code',                               // Code icon
         expandedContent: 'Started with basics and gradually moved to advanced concepts. Built small projects to practice.',
@@ -234,7 +234,7 @@ export const timeline = [
         type: 'project',                            // Color: Green
         title: 'Catch Store - E-commerce',
         subtitle: 'Full Stack Project',
-        date: '2024',
+        date: '2025',
         description: 'Built a complete e-commerce store with React, Node.js, and MongoDB.',
         icon: 'rocket',                             // Lightning icon
         expandedContent: 'Features include secure payments, admin panel, order tracking, and responsive design. My first major full-stack project.',
@@ -248,7 +248,7 @@ export const timeline = [
         type: 'project',
         title: 'Army SMP-2 Store',
         subtitle: 'Minecraft Server Store',
-        date: '2024',
+        date: '2026',
         description: 'Full-stack Minecraft server store with ranks, cosmetics, and payment integration.',
         icon: 'rocket',
         expandedContent: 'Complete e-commerce solution for a Minecraft server including admin dashboard, payment gateway, and order management.',
@@ -262,7 +262,7 @@ export const timeline = [
         type: 'milestone',
         title: 'Exploring AI Tools',
         subtitle: 'Antigravity AI & More',
-        date: '2025',
+        date: '2026',
         description: 'Started using AI-powered development tools to enhance productivity.',
         icon: 'milestone',                          // Star icon
         expandedContent: 'Learning to leverage AI for faster development while maintaining code quality and understanding.',
